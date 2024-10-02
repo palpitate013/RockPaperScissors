@@ -14,9 +14,19 @@ function getRandomInt(min, max) {
     const maxFloored = Math.floor(max);
     return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled);
 }
+function loss(selected, )
 
 function outGen(rock, paper, scissors){
-    
+    let ran = getRandomInt(0,2);
+    if (ran == 0){
+         
+    }
+    else if (paper == 1){
+
+    }
+    else if (scissors == 1){
+
+    }
 }
 
 // Introduction "Would you like to play"
