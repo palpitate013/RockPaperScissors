@@ -37,13 +37,13 @@ if (answer = "y"){
         rock = 1;
         scissors = 0;
         if (ran == 0){
-            alert();
+            alert("Rock v Scissors ---- You Win");
         }
         else if (ran == 1){
-            alert();
+            alert("Rock v Rock ---- Tie");
         }
         else if (ran == 2){
-            alert();
+            alert("Rock v Paper ---- You lose");
         }
     }
     else if (choice = "paper" || "Paper" || "PAPER"){
@@ -51,13 +51,13 @@ if (answer = "y"){
         paper = 1;
         rock = 0;
         if (ran == 0){
-            alert();
+            alert("Paper v Rock ---- You win");
         }
         else if (ran == 1){
-            alert();
+            alert("Paper v Paper ---- Tie");
         }
         else if (ran == 2){
-            alert();
+            alert("Paper v Scissors ---- You Lose");
         }
     }
     else if (choice = "scissors" || "Scissors" || "SCISSORS"){
@@ -65,13 +65,13 @@ if (answer = "y"){
         scissors = 1;
         paper = 0;
         if (ran == 0){
-            alert();
+            alert("Scissors v Paper ---- You Win");
         }
         else if (ran == 1){
-            alert();
+            alert("Scissors v Scissors ---- Tie");
         }
         else if (ran == 2){
-            alert();
+            alert("Scissors v Rock ---- You Lose");
         }
     }
 }else if (answer = "n"){
