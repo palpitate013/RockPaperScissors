@@ -14,18 +14,32 @@ function getRandomInt(min, max) {
     const maxFloored = Math.floor(max);
     return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled);
 }
-function loss(selected, )
+
+// Function for a loss
+function loss(){
+
+}
+
+// Function for Winning
+function win(){
+
+}
+
+// Function for a tie
+function tie(){
+
+}
 
 function outGen(rock, paper, scissors){
     let ran = getRandomInt(0,2);
     if (ran == 0){
-         
+         win
     }
-    else if (paper == 1){
-
+    else if (ran == 1){
+        tie
     }
-    else if (scissors == 1){
-
+    else if (ran == 3){
+        loss
     }
 }
 
