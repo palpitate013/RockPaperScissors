@@ -15,36 +15,9 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled);
 }
 
-// Function for a loss
-function loss(){
-
-}
-
-// Function for Winning
-function win(){
-
-}
-
-// Function for a tie
-function tie(){
-
-}
-
-function outGen(rock, paper, scissors){
-    let ran = getRandomInt(0,2);
-    if (ran == 0){
-         win
-    }
-    else if (ran == 1){
-        tie
-    }
-    else if (ran == 3){
-        loss
-    }
-}
-
 // Introduction "Would you like to play"
 let answer = prompt("Hello! would you like to play rock, paper, scissors?");
+// Option to play the game
 if (answer = "y"){
     console.log("Alright, lets get started");
     let choice = prompt("Your choice: ");
