@@ -31,23 +31,48 @@ if (answer = "y"){
     console.log("Scissors...")
     sleep(1000);
     console.log("shoot...")
+    let ran = getRandomInt(0, 2); // Generates the outcome
     if (choice = "rock" || "Rock" || "ROCK"){
         paper = 2;
         rock = 1;
         scissors = 0;
-        outGen(rock, paper, scissors);
+        if (ran == 0){
+            alert();
+        }
+        else if (ran == 1){
+            alert();
+        }
+        else if (ran == 2){
+            alert();
+        }
     }
     else if (choice = "paper" || "Paper" || "PAPER"){
         scissors = 2;
         paper = 1;
         rock = 0;
-        outGen(rock, paper, scissors);
+        if (ran == 0){
+            alert();
+        }
+        else if (ran == 1){
+            alert();
+        }
+        else if (ran == 2){
+            alert();
+        }
     }
     else if (choice = "scissors" || "Scissors" || "SCISSORS"){
         rock = 2;
         scissors = 1;
         paper = 0;
-        outGen(rock, paper, scissors);
+        if (ran == 0){
+            alert();
+        }
+        else if (ran == 1){
+            alert();
+        }
+        else if (ran == 2){
+            alert();
+        }
     }
 }else if (answer = "n"){
     console.log("Darn you got my hopes up");
