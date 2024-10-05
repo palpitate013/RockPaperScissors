@@ -19,18 +19,18 @@ function getRandomInt(min, max) {
 let answer = prompt("Hello! would you like to play rock, paper, scissors?");
 // Option to play the game
 if (answer = "y"){
-    console.log("Alright, lets get started");
+    alert("Alright, lets get started");
     let choice = prompt("Your choice: ");
     sleep(1000);
-    console.log("Ready...")
+    alert("Ready...")
     sleep(1000);
-    console.log("Rock...")
+    alert("Rock...")
     sleep(1000);
-    console.log("Paper...")
+    alert("Paper...")
     sleep(1000);
-    console.log("Scissors...")
+    alert("Scissors...")
     sleep(1000);
-    console.log("shoot...")
+    alert("shoot...")
     let ran = getRandomInt(0, 2); // Generates the outcome
     if (choice = "rock" || "Rock" || "ROCK"){
         paper = 2;
@@ -75,7 +75,7 @@ if (answer = "y"){
         }
     }
 }else if (answer = "n"){
-    console.log("Darn you got my hopes up");
+    alert("Darn you got my hopes up");
 }else {
-    console.log('Sorry I must be high. Try "y" or "n"');
+    alert('Sorry I must be high. Try "y" or "n"');
 }
