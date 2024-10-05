@@ -33,9 +33,6 @@ if (answer = "y"){
     alert("shoot...")
     let ran = getRandomInt(0, 2); // Generates the outcome
     if (choice = "rock" || "Rock" || "ROCK"){
-        paper = 2;
-        rock = 1;
-        scissors = 0;
         if (ran == 0){
             alert("Rock v Scissors ---- You Win");
         }
@@ -47,11 +44,8 @@ if (answer = "y"){
         }
     }
     else if (choice = "paper" || "Paper" || "PAPER"){
-        scissors = 2;
-        paper = 1;
-        rock = 0;
         if (ran == 0){
-            alert("Paper v Rock ---- You win");
+            alert("Paper v Rock ---- You Win");
         }
         else if (ran == 1){
             alert("Paper v Paper ---- Tie");
@@ -61,9 +55,6 @@ if (answer = "y"){
         }
     }
     else if (choice = "scissors" || "Scissors" || "SCISSORS"){
-        rock = 2;
-        scissors = 1;
-        paper = 0;
         if (ran == 0){
             alert("Scissors v Paper ---- You Win");
         }
