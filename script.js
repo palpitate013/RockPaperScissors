@@ -23,15 +23,15 @@ if (answer == "y"){
     alert("Alright, lets get started");
     while (playing == 1){
         let choice = prompt("Your choice: ");
-        sleep(1000);
+        await sleep(1000);
         alert("Ready...")
-        sleep(1000);
+        await sleep(1000);
         alert("Rock...")
-        sleep(1000);
+        await sleep(1000);
         alert("Paper...")
-        sleep(1000);
+        await sleep(1000);
         alert("Scissors...")
-        sleep(1000);
+        await sleep(1000);
         alert("shoot...")
         let ran = getRandomInt(0, 2); // Generates the outcome
         if (choice == "rock" || choice == "Rock" || choice == "ROCK"){
