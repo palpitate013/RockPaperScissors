@@ -13,7 +13,7 @@ function getRandomInt(min, max) {
 
 // Introduction "Would you like to play"
 let playing = 0;
-while (playing == 0){let answer = prompt("Hello! would you like to play rock, paper, scissors?");
+while (playing === 0){let answer = prompt("Hello! would you like to play rock, paper, scissors?");
 // Allows for score keeping
 let usrScore = 0;
 let comScore = 0;
@@ -21,7 +21,7 @@ let comScore = 0;
 if (answer == "y"){
     playing = 1;
     alert("Alright, lets get started");
-    while (playing == 1){
+    while (playing === 1){
         let choice = prompt("Your choice: ").toLowerCase();
         await sleep(1000);
         alert("Ready...")
