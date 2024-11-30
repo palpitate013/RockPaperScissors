@@ -1,12 +1,8 @@
 // Function to simmulate time in milliseconds
 function sleep(milliseconds) {
-    var start = new Date().getTime();
-    for (var i = 0; i < 1e7; i++) {
-      if ((new Date().getTime() - start) > milliseconds){
-        break;
-        }
-    }
+    return new Promise(resolve => setTimeout(resolve, milliseconds));
 }
+
 
 // Function to generate random number
 function getRandomInt(min, max) {
