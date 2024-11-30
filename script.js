@@ -22,7 +22,7 @@ if (answer == "y"){
     playing = 1;
     alert("Alright, lets get started");
     while (playing == 1){
-        let choice = prompt("Your choice: ");
+        let choice = prompt("Your choice: ").toLowerCase();
         await sleep(1000);
         alert("Ready...")
         await sleep(1000);
@@ -34,7 +34,7 @@ if (answer == "y"){
         await sleep(1000);
         alert("shoot...")
         let ran = getRandomInt(0, 2); // Generates the outcome
-        if (choice == "rock" || choice == "Rock" || choice == "ROCK"){
+        if (choice == "rock"){
             if (ran == 0){
                 alert("Rock v Scissors ---- You Win");
                 usrScore++
@@ -47,7 +47,7 @@ if (answer == "y"){
                 comScore++
             }
         }
-        else if (choice == "paper" || choice == "Paper" || choice == "PAPER"){
+        else if (choice == "paper"){
             if (ran == 0){
                 alert("Paper v Rock ---- You Win");
                 usrScore++
@@ -60,7 +60,7 @@ if (answer == "y"){
                 comScore++
             }
         }
-        else if (choice == "scissors" || choice == "Scissors" || choice == "SCISSORS"){
+        else if (choice == "scissors"){
             if (ran == 0){
                 alert("Scissors v Paper ---- You Win");
                 usrScore++
