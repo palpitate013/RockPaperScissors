@@ -65,8 +65,8 @@ function playing(){
         if (answer == "y"){
             playAgain = 1
         }else if (answer == "n"){
-            playAgain = 2;
-            playing = 2;
+            playAgain = 1;
+            isPlaying = 1;
         }else {
             alert('Sorry I must be high. Try again');
         }
