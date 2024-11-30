@@ -18,10 +18,10 @@ while (playing == 0){let answer = prompt("Hello! would you like to play rock, pa
 let usrScore = 0;
 let comScore = 0;
 // Option to play the game
-if (answer = "y"){
+if (answer == "y"){
     playing = 1;
     alert("Alright, lets get started");
-    while (playing = 1){
+    while (playing == 1){
         let choice = prompt("Your choice: ");
         sleep(1000);
         alert("Ready...")
@@ -34,7 +34,7 @@ if (answer = "y"){
         sleep(1000);
         alert("shoot...")
         let ran = getRandomInt(0, 2); // Generates the outcome
-        if (choice = "rock" || "Rock" || "ROCK"){
+        if (choice == "rock" || choice == "Rock" || choice == "ROCK"){
             if (ran == 0){
                 alert("Rock v Scissors ---- You Win");
                 usrScore++
@@ -47,7 +47,7 @@ if (answer = "y"){
                 comScore++
             }
         }
-        else if (choice = "paper" || "Paper" || "PAPER"){
+        else if (choice == "paper" || choice == "Paper" || choice == "PAPER"){
             if (ran == 0){
                 alert("Paper v Rock ---- You Win");
                 usrScore++
@@ -60,7 +60,7 @@ if (answer = "y"){
                 comScore++
             }
         }
-        else if (choice = "scissors" || "Scissors" || "SCISSORS"){
+        else if (choice == "scissors" || choice == "Scissors" || choice == "SCISSORS"){
             if (ran == 0){
                 alert("Scissors v Paper ---- You Win");
                 usrScore++
@@ -77,10 +77,10 @@ if (answer = "y"){
         let playAgain = 0;
         while (playAgain == 0){
             answer = prompt("Would you like to keep playing? (y/n)");
-            if (answer = "y"){
+            if (answer == "y"){
                 playAgain = 1
             }
-            else if (answer = "n"){
+            else if (answer == "n"){
                 playAgain = 2;
                 playing = 2;
             }
@@ -89,7 +89,7 @@ if (answer = "y"){
             }
         }
     }
-}else if (answer = "n"){
+}else if (answer == "n"){
     alert("Darn you got my hopes up");
     playing = 2;
 }else {
