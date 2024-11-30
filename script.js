@@ -24,56 +24,56 @@ let comScore = 0;
 // Option to play the game
 if (answer = "y"){
     playing = 1;
-    console.log("Alright, lets get started");
+    alert("Alright, lets get started");
     while (playing = 1){
         let choice = prompt("Your choice: ");
         sleep(1000);
-        console.log("Ready...")
+        alert("Ready...")
         sleep(1000);
-        console.log("Rock...")
+        alert("Rock...")
         sleep(1000);
-        console.log("Paper...")
+        alert("Paper...")
         sleep(1000);
-        console.log("Scissors...")
+        alert("Scissors...")
         sleep(1000);
-        console.log("shoot...")
+        alert("shoot...")
         let ran = getRandomInt(0, 2); // Generates the outcome
         if (choice = "rock" || "Rock" || "ROCK"){
             if (ran == 0){
-                console.log("Rock v Scissors ---- You Win");
+                alert("Rock v Scissors ---- You Win");
                 usrScore++
             }
             else if (ran == 1){
-                console.log("Rock v Rock ---- Tie");
+                alert("Rock v Rock ---- Tie");
             }
             else if (ran == 2){
-                console.log("Rock v Paper ---- You lose");
+                alert("Rock v Paper ---- You lose");
                 comScore++
             }
         }
         else if (choice = "paper" || "Paper" || "PAPER"){
             if (ran == 0){
-                console.log("Paper v Rock ---- You Win");
+                alert("Paper v Rock ---- You Win");
                 usrScore++
             }
             else if (ran == 1){
-                console.log("Paper v Paper ---- Tie");
+                alert("Paper v Paper ---- Tie");
             }
             else if (ran == 2){
-                console.log("Paper v Scissors ---- You Lose");
+                alert("Paper v Scissors ---- You Lose");
                 comScore++
             }
         }
         else if (choice = "scissors" || "Scissors" || "SCISSORS"){
             if (ran == 0){
-                console.log("Scissors v Paper ---- You Win");
+                alert("Scissors v Paper ---- You Win");
                 usrScore++
             }
             else if (ran == 1){
-                console.log("Scissors v Scissors ---- Tie");
+                alert("Scissors v Scissors ---- Tie");
             }
             else if (ran == 2){
-                console.log("Scissors v Rock ---- You Lose");
+                alert("Scissors v Rock ---- You Lose");
                 comScore++
             }
         }
@@ -89,13 +89,13 @@ if (answer = "y"){
                 playing = 2;
             }
             else {
-                console.log('Sorry I must be high. Try again');
+                alert('Sorry I must be high. Try again');
             }
         }
     }
 }else if (answer = "n"){
-    console.log("Darn you got my hopes up");
+    alert("Darn you got my hopes up");
     playing = 2;
 }else {
-    console.log('Sorry I must be high. Try "y" or "n"');
+    alert('Sorry I must be high. Try "y" or "n"');
 }}
