@@ -11,37 +11,18 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled);
 }
 
-//Game Logic
-let playing = 0;
-// Allows for score keeping
-let usrScore = 0;
-let comScore = 0;
-while(playing === 0){
-    // Introduction "Would you like to play"
-    let answer = prompt("Hello! would you like to play rock, paper, scissors?");
-    if (answer == "y"){
-        playing = 1;
-        playing();
-    }else if (answer == "n"){
-    alert("Darn you got my hopes up");
-    playing = 2;
-    }else {
-    alert('Sorry I must be high. Try "y" or "n"');
-    }
-}
-
 function playing(){
     alert("Alright, lets get started");
     let choice = prompt("Your choice: ").toLowerCase();
-    await sleep(1000);
+    sleep(1000);
     alert("Ready...")
-    await sleep(1000);
+    sleep(1000);
     alert("Rock...")
-    await sleep(1000);
+    sleep(1000);
     alert("Paper...")
-    await sleep(1000);
+    sleep(1000);
     alert("Scissors...")
-    await sleep(1000);
+    sleep(1000);
     alert("shoot...")
     let ran = getRandomInt(0, 2); // Generates the outcome
     if (choice == "rock"){
@@ -89,5 +70,24 @@ function playing(){
         }else {
             alert('Sorry I must be high. Try again');
         }
+    }
+}
+
+//Game Logic
+let playing = 0;
+// Allows for score keeping
+let usrScore = 0;
+let comScore = 0;
+while(playing === 0){
+    // Introduction "Would you like to play"
+    let answer = prompt("Hello! would you like to play rock, paper, scissors?");
+    if (answer == "y"){
+        playing = 1;
+        playing();
+    }else if (answer == "n"){
+    alert("Darn you got my hopes up");
+    playing = 2;
+    }else {
+    alert('Sorry I must be high. Try "y" or "n"');
     }
 }
