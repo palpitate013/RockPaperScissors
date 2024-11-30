@@ -12,63 +12,65 @@ function getRandomInt(min, max) {
 }
 
 function playing(){
-    alert("Alright, lets get started");
-    let choice = prompt("Your choice: ").toLowerCase();
-    sleep(1000);
-    alert("Ready...")
-    sleep(1000);
-    alert("Rock...")
-    sleep(1000);
-    alert("Paper...")
-    sleep(1000);
-    alert("Scissors...")
-    sleep(1000);
-    alert("shoot...")
-    let ran = getRandomInt(0, 2); // Generates the outcome
-    if (choice == "rock"){
-        if (ran == 0){
-            alert("Rock v Scissors ---- You Win");
-            usrScore++
-        }else if (ran == 1){
-            alert("Rock v Rock ---- Tie");
-        }else if (ran == 2){
-            alert("Rock v Paper ---- You lose");
-            comScore++
+    while (isPlaying == 1){
+        alert("Alright, lets get started");
+        let choice = prompt("Your choice: ").toLowerCase();
+        sleep(1000);
+        alert("Ready...")
+        sleep(1000);
+        alert("Rock...")
+        sleep(1000);
+        alert("Paper...")
+        sleep(1000);
+        alert("Scissors...")
+        sleep(1000);
+        alert("shoot...")
+        let ran = getRandomInt(0, 2); // Generates the outcome
+        if (choice == "rock"){
+            if (ran == 0){
+                alert("Rock v Scissors ---- You Win");
+                usrScore++
+            }else if (ran == 1){
+                alert("Rock v Rock ---- Tie");
+            }else if (ran == 2){
+                alert("Rock v Paper ---- You lose");
+                comScore++
+            }
+        }else if (choice == "paper"){
+            if (ran == 0){
+                alert("Paper v Rock ---- You Win");
+                usrScore++
+            }else if (ran == 1){
+                alert("Paper v Paper ---- Tie");
+            }else if (ran == 2){
+                alert("Paper v Scissors ---- You Lose");
+                comScore++
+            }
         }
-    }else if (choice == "paper"){
-        if (ran == 0){
-            alert("Paper v Rock ---- You Win");
-            usrScore++
-        }else if (ran == 1){
-            alert("Paper v Paper ---- Tie");
-        }else if (ran == 2){
-            alert("Paper v Scissors ---- You Lose");
-            comScore++
+        else if (choice == "scissors"){
+            if (ran == 0){
+                alert("Scissors v Paper ---- You Win");
+                usrScore++
+            }else if (ran == 1){
+                alert("Scissors v Scissors ---- Tie");
+            }
+            else if (ran == 2){
+                alert("Scissors v Rock ---- You Lose");
+                comScore++
+            }
         }
-    }
-    else if (choice == "scissors"){
-        if (ran == 0){
-            alert("Scissors v Paper ---- You Win");
-            usrScore++
-        }else if (ran == 1){
-            alert("Scissors v Scissors ---- Tie");
-        }
-        else if (ran == 2){
-            alert("Scissors v Rock ---- You Lose");
-            comScore++
-        }
-    }
-    alert("The score is now " + usrScore + " user score " + comScore + " computer score.")
-    let playAgain = 0;
-    while (playAgain == 0){
-        answer = prompt("Would you like to keep playing? (y/n)");
-        if (answer == "y"){
-            playAgain = 1
-        }else if (answer == "n"){
-            playAgain = 1;
-            isPlaying = 1;
-        }else {
-            alert('Sorry I must be high. Try again');
+        alert("The score is now " + usrScore + " user score " + comScore + " computer score.")
+        let playAgain = 0;
+        while (playAgain == 0){
+            answer = prompt("Would you like to keep playing? (y/n)");
+            if (answer == "y"){
+                playAgain = 1
+            }else if (answer == "n"){
+                isPlaying = 0;
+                break;
+            }else {
+                alert('Sorry I must be high. Try again');
+            }
         }
     }
 }
