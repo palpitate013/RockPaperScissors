@@ -74,19 +74,18 @@ function playing(){
 }
 
 //Game Logic
-let playing = 0;
+let isPlaying = 0;
 // Allows for score keeping
 let usrScore = 0;
 let comScore = 0;
-while(playing === 0){
+while(isPlaying === 0){
     // Introduction "Would you like to play"
     let answer = prompt("Hello! would you like to play rock, paper, scissors?");
     if (answer == "y"){
-        playing = 1;
+        isPlaying = 1;
         playing();
     }else if (answer == "n"){
     alert("Darn you got my hopes up");
-    playing = 2;
     }else {
     alert('Sorry I must be high. Try "y" or "n"');
     }
