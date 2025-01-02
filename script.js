@@ -94,6 +94,7 @@ function playing(){
     }
 }
 
+let choice = ""; // Declaring choice globally
 // Introduction "Would you like to play"
 document.addEventListener('DOMContentLoaded', () => {
     changeText('Hello, would you like to play Rock, Paper, Scissors?');
@@ -103,7 +104,6 @@ document.getElementById("yesButton").addEventListener("click", async () => {
     hideDiv("playYN");
     changeText("Select your Option");
     showDiv("options");
-    let choice = "";
 })
 document.getElementById("rockButton").addEventListener("click", async () => {
     choice = "rock";
