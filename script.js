@@ -35,8 +35,9 @@ function darn(){
 }
 
 function playAgain(){
-    showDiv("playAgainOrQuit");
     hideDiv("options");
+    changeText("Would you like to play again")
+    showDiv("playAgainOrQuit");
     document.getElementById("playAgainButton").addEventListener("click", async () => {
         hideDiv("playAgainOrQuit");
         showDiv("options");
@@ -49,6 +50,7 @@ function playAgain(){
 
 // Game is playing
 function playing(){
+    changeText("Select your Option");
     let ran = getRandomInt(0, 2); // Generates the outcome
     if (choice == "rock"){
         if (ran == 0){
@@ -76,8 +78,7 @@ function playing(){
             comScore++
             playAgain();
         }
-    }
-    else if (choice == "scissors"){
+    }else if (choice == "scissors"){
         if (ran == 0){
             changeText("Scissors v Paper ---- You Win");
             usrScore++
@@ -102,7 +103,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 document.getElementById("yesButton").addEventListener("click", async () => {
     hideDiv("playYN");
-    changeText("Select your Option");
     showDiv("options");
 })
 document.getElementById("rockButton").addEventListener("click", async () => {
