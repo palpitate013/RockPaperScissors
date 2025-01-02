@@ -38,9 +38,24 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 document.getElementById("yesButton").addEventListener("click", async () => {
     hideDiv("playYN");
-    changeText("Select your Option")    
+    changeText("Select your Option");
     showDiv("options");
+})
+document.getElementById("rockButton").addEventListener("click", async () => {
+
+})
+document.getElementById("paperButton").addEventListener("click", async () => {
+
+})
+document.getElementById("scissorsButton").addEventListener("click", async () => {
+
 })
 document.getElementById("noButton").addEventListener("click", async () =>{
     darn();
+})
+document.getElementById("playAgainButton").addEventListener("click", async () => {
+
+})
+document.getElementById("quitButton").addEventListener("click", async () => {
+
 })
