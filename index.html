@@ -4,9 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+    <h1>Rock Paper Scissors</h1>
+    <!--Instruction Text-->
+    <p id="instruction">This text should be instruction</p>
+    <div id="scoresContainer">
+        <div id="usrScoreContainer">
+            <p>Your Score</p>
+            <p id="userScore">0</p>
+        </div>
+        <div id="comScoreContainer">
+            <p>Computer Score</p>
+            <p id="comScore">0</p>
+        </div>
+    </div>
     
+    <div id="playYN">
+        <button id="yesButton">Yes</button>
+        <button id="noButton">No</button>
+    </div>
+    <div id="options"> <!--Rock Paper Scissor Buttons-->
+        <button id="rockButton">Rock</button>
+        <button id="paperButton">Paper</button>
+        <button id="scissorsButton">Scissors</button>
+    </div>
+    <div id="playAgainOrQuit"><!--Play again buttons-->
+        <button id="playAgainButton">Play again</button>
+        <button id="quitButton">Quit</button>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,27 @@
+* {
+    text-align: center;
+    background-color: #383838;
+    color: #ffffff;
+}
+button {
+    background-color: blue; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#playYN, #options, #playAgainOrQuit {
+    display: none;
+}
+
+#scoresContainer{
+    display: flex;
+}
+#scoresContainer div{
+    flex-grow: 1;
+    text-align: center;
+}
