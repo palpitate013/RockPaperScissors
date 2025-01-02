@@ -51,48 +51,56 @@ function playAgain(){
 // Game is playing
 function playing(){
     changeText("Select your Option");
-    let ran = getRandomInt(0, 2); // Generates the outcome
-    if (choice == "rock"){
-        if (ran == 0){
+    document.getElementById("rockButton").addEventListener("click", async () => {
+        choice = "rock";
+        evaluateOutcome();
+    })
+    document.getElementById("paperButton").addEventListener("click", async () => {
+        choice = "paper";
+        evaluateOutcome();
+    })
+    document.getElementById("scissorsButton").addEventListener("click", async () => {
+        choice = "scissors";
+        evaluateOutcome();
+    })
+
+}
+
+// Function to evaluate the outcome
+function evaluateOutcome() {
+    const ran = getRandomInt(0, 2); // Generates the outcome
+    if (choice === "rock") {
+        if (ran === 0) {
             changeText("Rock v Scissors ---- You Win");
-            usrScore++
-            playAgain();
-        }else if (ran == 1){
+            gameState.usrScore++;
+        } else if (ran === 1) {
             changeText("Rock v Rock ---- Tie");
-            playAgain();
-        }else if (ran == 2){
-            changeText("Rock v Paper ---- You lose");
-            comScore++
-            playAgain();
+        } else if (ran === 2) {
+            changeText("Rock v Paper ---- You Lose");
+            gameState.comScore++;
         }
-    }else if (choice == "paper"){
-        if (ran == 0){
+    } else if (choice === "paper") {
+        if (ran === 0) {
             changeText("Paper v Rock ---- You Win");
-            usrScore++
-            playAgain();
-        }else if (ran == 1){
+            gameState.usrScore++;
+        } else if (ran === 1) {
             changeText("Paper v Paper ---- Tie");
-            playAgain();
-        }else if (ran == 2){
+        } else if (ran === 2) {
             changeText("Paper v Scissors ---- You Lose");
-            comScore++
-            playAgain();
+            gameState.comScore++;
         }
-    }else if (choice == "scissors"){
-        if (ran == 0){
+    } else if (choice === "scissors") {
+        if (ran === 0) {
             changeText("Scissors v Paper ---- You Win");
-            usrScore++
-            playAgain();
-        }else if (ran == 1){
+            gameState.usrScore++;
+        } else if (ran === 1) {
             changeText("Scissors v Scissors ---- Tie");
-            playAgain();
-        }
-        else if (ran == 2){
+        } else if (ran === 2) {
             changeText("Scissors v Rock ---- You Lose");
-            comScore++
-            playAgain();
+            gameState.comScore++;
         }
     }
+    playAgain();
 }
 
 let choice = ""; // Declaring choice globally
@@ -104,19 +112,8 @@ document.addEventListener('DOMContentLoaded', () => {
 document.getElementById("yesButton").addEventListener("click", async () => {
     hideDiv("playYN");
     showDiv("options");
-})
-document.getElementById("rockButton").addEventListener("click", async () => {
-    choice = "rock";
     playing();
 })
-document.getElementById("paperButton").addEventListener("click", async () => {
-    choice = "paper";
-    playing();
-})
-document.getElementById("scissorsButton").addEventListener("click", async () => {
-    choice = "scissors";
-    playing();
-})
-document.getElementById("noButton").addEventListener("click", async () =>{
-    darn();
-})
+    document.getElementById("noButton").addEventListener("click", async () =>{
+        darn();
+    })
