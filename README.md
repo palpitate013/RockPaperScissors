@@ -53,7 +53,3 @@ Add sound effects for button clicks and win/loss outcomes.
 Include animations for the score updates or when a choice is made.
 Extend the game with more options (e.g., Lizard and Spock).
 Track win/loss history or add a "best out of 5" mode.
-License
-This project is open-source and available for use under the MIT License.
-
-Would you like me to help you with any additional details or customizations?
