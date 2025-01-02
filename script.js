@@ -5,11 +5,6 @@ const gameState = {
     comScore: 0,
 };
 
-// Function to simmulate time in milliseconds
-function sleep(milliseconds) {
-    return new Promise(resolve => setTimeout(resolve, milliseconds));
-}
-
 // Function to change text
 function changeText(txt){
     document.getElementById("instruction").textContent = txt;
@@ -32,7 +27,7 @@ function getRandomInt(min, max) {
 }
 
 function darn(){
-    hideDiv("playAgain");
+    hideDiv("playAgainOrQuit");
     hideDiv("options");
     changeText('Hello, would you like to play Rock, Paper, Scissors?');
     showDiv("playYN");
