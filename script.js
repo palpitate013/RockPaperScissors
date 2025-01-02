@@ -31,6 +31,10 @@ function darn(){
     hideDiv("options");
     changeText('Hello, would you like to play Rock, Paper, Scissors?');
     showDiv("playYN");
+    usrScore = 0;
+    comScore = 0;
+    document.getElementById("userScore").textContent = gameState.usrScore;
+    document.getElementById("comScore").textContent = gameState.comScore;
     return
 }
 
@@ -41,7 +45,7 @@ function playAgain(){
     // Remove previous listeners and attach fresh ones
     document.getElementById("playAgainButton").replaceWith(document.getElementById("playAgainButton").cloneNode(true));
     document.getElementById("quitButton").replaceWith(document.getElementById("quitButton").cloneNode(true));
-    
+
     // New listners
     document.getElementById("playAgainButton").addEventListener("click", async () => {
         hideDiv("playAgainOrQuit");
