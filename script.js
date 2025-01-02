@@ -99,6 +99,8 @@ function evaluateOutcome() {
             gameState.comScore++;
         }
     }
+    document.getElementById("userScore").textContent = gameState.usrScore;
+    document.getElementById("comScore").textContent = gameState.comScore;
     playAgain();
 }
 

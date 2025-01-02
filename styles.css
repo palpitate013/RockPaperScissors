@@ -1,7 +1,18 @@
+* {
+    text-align: center;
+}
 .button {
     color: green;
 }
 
 #playYN, #options, #playAgainOrQuit {
     display: none;
+}
+
+#scoresContainer{
+    display: flex;
+}
+#scoresContainer div{
+    flex-grow: 1;
+    text-align: center;
 }
