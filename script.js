@@ -37,6 +37,12 @@ function darn(){
 function playAgain(){
     hideDiv("options");
     showDiv("playAgainOrQuit");
+
+    // Remove previous listeners and attach fresh ones
+    document.getElementById("playAgainButton").replaceWith(document.getElementById("playAgainButton").cloneNode(true));
+    document.getElementById("quitButton").replaceWith(document.getElementById("quitButton").cloneNode(true));
+    
+    // New listners
     document.getElementById("playAgainButton").addEventListener("click", async () => {
         hideDiv("playAgainOrQuit");
         showDiv("options");
@@ -50,6 +56,13 @@ function playAgain(){
 // Game is playing
 function playing(){
     changeText("Select your Option");
+
+    // Remove previous event listeners (if any)
+    document.getElementById("rockButton").replaceWith(document.getElementById("rockButton").cloneNode(true));
+    document.getElementById("paperButton").replaceWith(document.getElementById("paperButton").cloneNode(true));
+    document.getElementById("scissorsButton").replaceWith(document.getElementById("scissorsButton").cloneNode(true));
+    
+    // New listiners
     document.getElementById("rockButton").addEventListener("click", async () => {
         choice = "rock";
         evaluateOutcome();
