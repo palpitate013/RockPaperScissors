@@ -40,22 +40,26 @@ document.getElementById("yesButton").addEventListener("click", async () => {
     hideDiv("playYN");
     changeText("Select your Option");
     showDiv("options");
+    let choice = "";
 })
 document.getElementById("rockButton").addEventListener("click", async () => {
-
+    choice = "rock";
+    playing();
 })
 document.getElementById("paperButton").addEventListener("click", async () => {
-
+    choice = "paper";
+    playing();
 })
 document.getElementById("scissorsButton").addEventListener("click", async () => {
-
+    choice = "scissors";
+    playing();
 })
 document.getElementById("noButton").addEventListener("click", async () =>{
     darn();
 })
 document.getElementById("playAgainButton").addEventListener("click", async () => {
-
+    hideDiv("playAgainOrQuit");
 })
 document.getElementById("quitButton").addEventListener("click", async () => {
-
+    darn();
 })
