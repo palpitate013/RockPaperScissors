@@ -67,42 +67,30 @@ function playing(){
 
 // Function to evaluate the outcome
 function evaluateOutcome() {
-    const ran = getRandomInt(0, 2); // Generates the outcome
-    if (choice === "rock") {
-        if (ran === 0) {
-            changeText("Rock v Scissors ---- You Win. Would you like to play again");
-            gameState.usrScore++;
-        } else if (ran === 1) {
-            changeText("Rock v Rock ---- Tie. Would you like to play again");
-        } else if (ran === 2) {
-            changeText("Rock v Paper ---- You Lose. Would you like to play again");
-            gameState.comScore++;
-        }
-    } else if (choice === "paper") {
-        if (ran === 0) {
-            changeText("Paper v Rock ---- You Win. Would you like to play again");
-            gameState.usrScore++;
-        } else if (ran === 1) {
-            changeText("Paper v Paper ---- Tie. Would you like to play again");
-        } else if (ran === 2) {
-            changeText("Paper v Scissors ---- You Lose. Would you like to play again");
-            gameState.comScore++;
-        }
-    } else if (choice === "scissors") {
-        if (ran === 0) {
-            changeText("Scissors v Paper ---- You Win. Would you like to play again");
-            gameState.usrScore++;
-        } else if (ran === 1) {
-            changeText("Scissors v Scissors ---- Tie. Would you like to play again");
-        } else if (ran === 2) {
-            changeText("Scissors v Rock ---- You Lose. Would you like to play again");
-            gameState.comScore++;
-        }
+    let outcomes = ["rock", "paper", "scissors"];
+    let ran = getRandomInt(0, 2);
+    let comChoice = outcomes[ran];
+    
+    let resultText = {
+        rock: { rock: "Tie", paper: "You Lose", scissors: "You Win" },
+        paper: { rock: "You Win", paper: "Tie", scissors: "You Lose" },
+        scissors: { rock: "You Lose", paper: "You Win", scissors: "Tie" },
+    };
+    
+    let result = resultText[choice][comChoice];
+    changeText(`${choice} v ${comChoice} ---- ${result}. Would you like to play again?`);
+    
+    if (result === "You Win") {
+        gameState.usrScore++;
+    } else if (result === "You Lose") {
+        gameState.comScore++;
     }
+    
     document.getElementById("userScore").textContent = gameState.usrScore;
     document.getElementById("comScore").textContent = gameState.comScore;
     playAgain();
 }
+
 
 let choice = ""; // Declaring choice globally
 // Introduction "Would you like to play"
