@@ -36,7 +36,6 @@ function darn(){
 
 function playAgain(){
     hideDiv("options");
-    changeText("Would you like to play again")
     showDiv("playAgainOrQuit");
     document.getElementById("playAgainButton").addEventListener("click", async () => {
         hideDiv("playAgainOrQuit");
@@ -71,32 +70,32 @@ function evaluateOutcome() {
     const ran = getRandomInt(0, 2); // Generates the outcome
     if (choice === "rock") {
         if (ran === 0) {
-            changeText("Rock v Scissors ---- You Win");
+            changeText("Rock v Scissors ---- You Win. Would you like to play again");
             gameState.usrScore++;
         } else if (ran === 1) {
-            changeText("Rock v Rock ---- Tie");
+            changeText("Rock v Rock ---- Tie. Would you like to play again");
         } else if (ran === 2) {
-            changeText("Rock v Paper ---- You Lose");
+            changeText("Rock v Paper ---- You Lose. Would you like to play again");
             gameState.comScore++;
         }
     } else if (choice === "paper") {
         if (ran === 0) {
-            changeText("Paper v Rock ---- You Win");
+            changeText("Paper v Rock ---- You Win. Would you like to play again");
             gameState.usrScore++;
         } else if (ran === 1) {
-            changeText("Paper v Paper ---- Tie");
+            changeText("Paper v Paper ---- Tie. Would you like to play again");
         } else if (ran === 2) {
-            changeText("Paper v Scissors ---- You Lose");
+            changeText("Paper v Scissors ---- You Lose. Would you like to play again");
             gameState.comScore++;
         }
     } else if (choice === "scissors") {
         if (ran === 0) {
-            changeText("Scissors v Paper ---- You Win");
+            changeText("Scissors v Paper ---- You Win. Would you like to play again");
             gameState.usrScore++;
         } else if (ran === 1) {
-            changeText("Scissors v Scissors ---- Tie");
+            changeText("Scissors v Scissors ---- Tie. Would you like to play again");
         } else if (ran === 2) {
-            changeText("Scissors v Rock ---- You Lose");
+            changeText("Scissors v Rock ---- You Lose. Would you like to play again");
             gameState.comScore++;
         }
     }
