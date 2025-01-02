@@ -31,6 +31,14 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled);
 }
 
+function darn(){
+    hideDiv("playAgain");
+    hideDiv("options");
+    changeText('Hello, would you like to play Rock, Paper, Scissors?');
+    showDiv("playYN");
+    return
+}
+
 function playAgain(){
     showDiv("playAgainOrQuit");
     hideDiv("options");
