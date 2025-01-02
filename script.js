@@ -31,6 +31,44 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled);
 }
 
+// Game is playing
+function playing(){
+    let ran = getRandomInt(0, 2); // Generates the outcome
+    if (choice == "rock"){
+        if (ran == 0){
+            changeText("Rock v Scissors ---- You Win");
+            usrScore++
+        }else if (ran == 1){
+            changeText("Rock v Rock ---- Tie");
+        }else if (ran == 2){
+            changeText("Rock v Paper ---- You lose");
+            comScore++
+        }
+    }else if (choice == "paper"){
+        if (ran == 0){
+            changeText("Paper v Rock ---- You Win");
+            usrScore++
+        }else if (ran == 1){
+            changeText("Paper v Paper ---- Tie");
+        }else if (ran == 2){
+            changeText("Paper v Scissors ---- You Lose");
+            comScore++
+        }
+    }
+    else if (choice == "scissors"){
+        if (ran == 0){
+            changeText("Scissors v Paper ---- You Win");
+            usrScore++
+        }else if (ran == 1){
+            changeText("Scissors v Scissors ---- Tie");
+        }
+        else if (ran == 2){
+            changeText("Scissors v Rock ---- You Lose");
+            comScore++
+        }
+    }
+}
+
 // Introduction "Would you like to play"
 document.addEventListener('DOMContentLoaded', () => {
     changeText('Hello, would you like to play Rock, Paper, Scissors?');
