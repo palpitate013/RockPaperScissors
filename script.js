@@ -31,6 +31,19 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled);
 }
 
+function playAgain(){
+    showDiv("playAgainOrQuit");
+    hideDiv("options");
+    document.getElementById("playAgainButton").addEventListener("click", async () => {
+        hideDiv("playAgainOrQuit");
+        showDiv("options");
+        playing();
+    })
+    document.getElementById("quitButton").addEventListener("click", async () => {
+        darn();
+    })
+}
+
 // Game is playing
 function playing(){
     let ran = getRandomInt(0, 2); // Generates the outcome
@@ -38,33 +51,42 @@ function playing(){
         if (ran == 0){
             changeText("Rock v Scissors ---- You Win");
             usrScore++
+            playAgain();
         }else if (ran == 1){
             changeText("Rock v Rock ---- Tie");
+            playAgain();
         }else if (ran == 2){
             changeText("Rock v Paper ---- You lose");
             comScore++
+            playAgain();
         }
     }else if (choice == "paper"){
         if (ran == 0){
             changeText("Paper v Rock ---- You Win");
             usrScore++
+            playAgain();
         }else if (ran == 1){
             changeText("Paper v Paper ---- Tie");
+            playAgain();
         }else if (ran == 2){
             changeText("Paper v Scissors ---- You Lose");
             comScore++
+            playAgain();
         }
     }
     else if (choice == "scissors"){
         if (ran == 0){
             changeText("Scissors v Paper ---- You Win");
             usrScore++
+            playAgain();
         }else if (ran == 1){
             changeText("Scissors v Scissors ---- Tie");
+            playAgain();
         }
         else if (ran == 2){
             changeText("Scissors v Rock ---- You Lose");
             comScore++
+            playAgain();
         }
     }
 }
@@ -93,11 +115,5 @@ document.getElementById("scissorsButton").addEventListener("click", async () => 
     playing();
 })
 document.getElementById("noButton").addEventListener("click", async () =>{
-    darn();
-})
-document.getElementById("playAgainButton").addEventListener("click", async () => {
-    hideDiv("playAgainOrQuit");
-})
-document.getElementById("quitButton").addEventListener("click", async () => {
     darn();
 })
